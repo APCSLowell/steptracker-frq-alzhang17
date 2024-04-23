@@ -7,7 +7,7 @@ public class StepTracker
   private int totalSteps = 0;
  
  public StepTracker(int stepMin1){
-   stepMin = step1;
+   stepMin = stepMin1;
  }
  
  public int activeDays(){
