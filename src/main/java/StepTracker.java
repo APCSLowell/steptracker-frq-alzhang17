@@ -1,13 +1,16 @@
 import java.util.ArrayList;
 public class StepTracker
 {
-  private int stepMin = 0;
-  private int totalDaysActive = 0;
-  private int totalDays = 0;
-  private int totalSteps = 0;
+  private int stepMin;
+  private int totalDaysActive;
+  private int totalDays;
+  private int totalSteps;
  
  public StepTracker(int stepMin1){
    stepMin = stepMin1;
+   totalSteps = 0;
+   totalDays = 0;
+   totalDaysActive = 0;
  }
  
  public int activeDays(){
@@ -22,11 +25,10 @@ public class StepTracker
  }
  
  public void addDailySteps(int steps){
-   if(steps > stepMin){
+   if(steps >= stepMin){
      totalDaysActive++;
-   }else{
-     totalDays++;
    }
+   totalDays++;
    totalSteps += steps;
  }
  } 
